@@ -1,10 +1,12 @@
 'use strict'
 
 const {globalShortcut , ipcMain, Menu, MenuItem} = require('electron');
-const { readFileSync, writeFile, readFile} = require('fs') // used to read files
+const { readFileSync, writeFile, readFile,createReadStream,statSync} = require('fs') // used to read files
 let parser = require('fast-xml-parser');
 //let j2xParser = require("fast-xml-parser").j2xParser;
-const path = require('path');
+const path  = require('path');
+var saxpath = require('saxpath');
+var sax     = require('sax');
 
 import { app, protocol, BrowserWindow } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
@@ -51,7 +53,7 @@ async function createWindow() {
 }
 
 // function to read from a json file
-function readAndParseXML (file_path) {
+function readAndParseXML (file_path,fileRequestEvent) {
 
   const parserOptions = {
     attributeNamePrefix : "@_",
@@ -69,21 +71,51 @@ function readAndParseXML (file_path) {
     indentBy: "\t"
   };
   try{  
-    const RootJson = parser.parse(
-                      readFileSync(file_path, 'utf8'),
-                      parserOptions);
+    let stats = statSync(file_path);
+    let fileSizeInMB = stats.size / (1024*1024);
 
-    return JSON.stringify(RootJson);
+    if(fileSizeInMB < 510){
+
+      const RootJson = parser.parse(
+          readFileSync(file_path, 'utf8'),
+          parserOptions);
+
+      fileRequestEvent.returnValue = JSON.stringify(RootJson);
+    }
+    else {
+      let fileStream = createReadStream(file_path);
+      let saxParser  = sax.createStream(true);
+      let streamer   = new saxpath.SaXPath(saxParser, '/AUTOSAR/AR-PACKAGES/AR-PACKAGE');
+      let streamJSON = {"AUTOSAR": { 
+                          "AR-PACKAGES": { 
+                              "AR-PACKAGE":[] 
+                            }
+                          }
+                        };
+  
+      streamer.on('match', function(arpackageXML) {
+  
+        let arpackageJSON = parser.parse(arpackageXML,parserOptions);
+        streamJSON['AUTOSAR']['AR-PACKAGES']['AR-PACKAGE'].push(arpackageJSON['AR-PACKAGE']);
+      });
+  
+      streamer.on('end', function() {
+        fileRequestEvent.returnValue = JSON.stringify(streamJSON);
+      });
+      
+      fileStream.pipe(saxParser);
+    }
+
      
   } catch(err){
     console.log(err.message);
-    return '{"FILE-READ-ERROR":"true"}';
+    fileRequestEvent.returnValue =  '{"FILE-READ-ERROR":"true"}';
 }                
 }
 
 // event listener for file open request
 ipcMain.on('file-open-request', (event, arg) => {
-  event.returnValue = readAndParseXML(arg)
+  readAndParseXML(arg,event)
 })
 
 // Quit when all windows are closed.
