@@ -1,5 +1,11 @@
 'use strict'
 
+const {globalShortcut , ipcMain, Menu, MenuItem} = require('electron');
+const { readFileSync, writeFile, readFile} = require('fs') // used to read files
+let parser = require('fast-xml-parser');
+//let j2xParser = require("fast-xml-parser").j2xParser;
+const path = require('path');
+
 import { app, protocol, BrowserWindow } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
@@ -12,16 +18,19 @@ protocol.registerSchemesAsPrivileged([
 
 async function createWindow() {
   // Create the browser window.
-  const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+  const win  = new BrowserWindow({
+    show: false,
+    minWidth : 700,
+    minHeight: 600,
+    icon: path.join(__static, '../src/assets/logo.ico'),
     webPreferences: {
-      
-      // Use pluginOptions.nodeIntegration, leave this alone
-      // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
-      nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION
+      nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
+      enableRemoteModule: true
     }
-  })
+  });
+
+  win.maximize();
+  win.show();
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode
@@ -32,7 +41,50 @@ async function createWindow() {
     // Load the index.html when not in development
     win.loadURL('app://./index.html')
   }
+
+  win.on('focus', () => {
+    globalShortcut.register('CommandOrControl+F', () => win.webContents.send('on-find'))
+  })
+  win.on('blur', () => {
+    globalShortcut.unregister('CommandOrControl+F')
+  })
 }
+
+// function to read from a json file
+function readAndParseXML (file_path) {
+
+  const parserOptions = {
+    attributeNamePrefix : "@_",
+    ignoreAttributes : false,
+    ignoreNameSpace: false,
+    parseNodeValue : false,
+    parseAttributeValue : false
+    };
+  const revparserOptions = {
+    attributeNamePrefix : "@_",
+    ignoreAttributes : false,
+    ignoreNameSpace: false,
+    format:true,
+    supressEmptyNode: true,
+    indentBy: "\t"
+  };
+  try{  
+    const RootJson = parser.parse(
+                      readFileSync(file_path, 'utf8'),
+                      parserOptions);
+
+    return JSON.stringify(RootJson);
+     
+  } catch(err){
+    console.log(err.message);
+    return '{"FILE-READ-ERROR":"true"}';
+}                
+}
+
+// event listener for file open request
+ipcMain.on('file-open-request', (event, arg) => {
+  event.returnValue = readAndParseXML(arg)
+})
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
