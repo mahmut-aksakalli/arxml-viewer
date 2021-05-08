@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2015-2016 The MathWorks, Inc.
+--><AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-0-3.xsd">
+    <AR-PACKAGES>
+    <AR-PACKAGE UUID="272bbb53-1503-4d35-8455-e222545bbd63">
+      <SHORT-NAME>pkg</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="4f87a323-9d72-5246-dfba-5e1319cb90e2">
+          <SHORT-NAME>tst002</SHORT-NAME>
+          <ELEMENTS>
+            <APPLICATION-SW-COMPONENT-TYPE UUID="c3d6eca3-6282-59f2-9537-ad8e4d3cd4b4">
+              <SHORT-NAME>swc001</SHORT-NAME>
+              <PORTS>
+                <R-PORT-PROTOTYPE UUID="1df5fb6e-920f-55ff-4480-8badeb6bf13f">
+                  <SHORT-NAME>in</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <NONQUEUED-RECEIVER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iRcv/e1</DATA-ELEMENT-REF>
+                      <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                      <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                      <ALIVE-TIMEOUT>60.0</ALIVE-TIMEOUT>
+                      <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                      <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                      <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                      <INIT-VALUE>
+                        <CONSTANT-REFERENCE>
+                          <SHORT-LABEL>DefaultInitValue_e1</SHORT-LABEL>
+                          <CONSTANT-REF DEST="CONSTANT-SPECIFICATION">/pkg/types/constants/C42</CONSTANT-REF>
+                        </CONSTANT-REFERENCE>
+                      </INIT-VALUE>
+                    </NONQUEUED-RECEIVER-COM-SPEC>
+                    <NONQUEUED-RECEIVER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iRcv/e2</DATA-ELEMENT-REF>
+                      <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                      <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                      <ALIVE-TIMEOUT>60.0</ALIVE-TIMEOUT>
+                      <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                      <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                      <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                      <INIT-VALUE>
+                        <CONSTANT-REFERENCE>
+                          <SHORT-LABEL>DefaultInitValu_76a35ae5448e6270</SHORT-LABEL>
+                          <CONSTANT-REF DEST="CONSTANT-SPECIFICATION">/pkg/types/constants/C0p89</CONSTANT-REF>
+                        </CONSTANT-REFERENCE>
+                      </INIT-VALUE>
+                    </NONQUEUED-RECEIVER-COM-SPEC>
+                    <NONQUEUED-RECEIVER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iRcv/e3</DATA-ELEMENT-REF>
+                      <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                      <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                      <ALIVE-TIMEOUT>60.0</ALIVE-TIMEOUT>
+                      <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                      <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                      <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                      <INIT-VALUE>
+                        <CONSTANT-REFERENCE>
+                          <SHORT-LABEL>init</SHORT-LABEL>
+                          <CONSTANT-REF DEST="CONSTANT-SPECIFICATION">/pkg/types/constants/ZERO</CONSTANT-REF>
+                        </CONSTANT-REFERENCE>
+                      </INIT-VALUE>
+                    </NONQUEUED-RECEIVER-COM-SPEC>
+                    <NONQUEUED-RECEIVER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iRcv/e4</DATA-ELEMENT-REF>
+                      <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                      <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                      <ALIVE-TIMEOUT>60.0</ALIVE-TIMEOUT>
+                      <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                      <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                      <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                      <INIT-VALUE>
+                        <CONSTANT-REFERENCE>
+                          <SHORT-LABEL>DefaultInitValu_0147db48be8e2d8b</SHORT-LABEL>
+                          <CONSTANT-REF DEST="CONSTANT-SPECIFICATION">/pkg/types/constants/CInit_array2</CONSTANT-REF>
+                        </CONSTANT-REFERENCE>
+                      </INIT-VALUE>
+                    </NONQUEUED-RECEIVER-COM-SPEC>
+                    <NONQUEUED-RECEIVER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iRcv/e5</DATA-ELEMENT-REF>
+                      <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                      <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                      <ALIVE-TIMEOUT>60.0</ALIVE-TIMEOUT>
+                      <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                      <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                      <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                      <INIT-VALUE>
+                        <CONSTANT-REFERENCE>
+                          <SHORT-LABEL>DefaultInitValue_struc001</SHORT-LABEL>
+                          <CONSTANT-REF DEST="CONSTANT-SPECIFICATION">/pkg/types/constants/CInit_struc001</CONSTANT-REF>
+                        </CONSTANT-REFERENCE>
+                      </INIT-VALUE>
+                    </NONQUEUED-RECEIVER-COM-SPEC>
+                    <NONQUEUED-RECEIVER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iRcv/e6</DATA-ELEMENT-REF>
+                      <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                      <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                      <ALIVE-TIMEOUT>60.0</ALIVE-TIMEOUT>
+                      <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                      <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                      <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                      <INIT-VALUE>
+                        <CONSTANT-REFERENCE>
+                          <SHORT-LABEL>DefaultInitValue_Enum001</SHORT-LABEL>
+                          <CONSTANT-REF DEST="CONSTANT-SPECIFICATION">/pkg/types/constants/RED</CONSTANT-REF>
+                        </CONSTANT-REFERENCE>
+                      </INIT-VALUE>
+                    </NONQUEUED-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/pkg/interfaces/iRcv</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="045ca2ac-402e-518f-602a-38217edeedb0">
+                  <SHORT-NAME>out</SHORT-NAME>
+                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/pkg/interfaces/iSend</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="5277f9f2-5e54-4682-8685-71dca6ffa774">
+                  <SHORT-NAME>pport</SHORT-NAME>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/pkg/interfaces/iOperations</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="cff41748-16e3-40d5-b898-aeca00846138">
+                  <SHORT-NAME>rport</SHORT-NAME>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/pkg/interfaces/iServer</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="bec58be4-f65a-410c-8756-534d3eb12315">
+                  <SHORT-NAME>rmode</SHORT-NAME>
+                  <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/pkg/interfaces/iEcuMode</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="ae559468-4b08-5457-3887-2da711222da5">
+                  <SHORT-NAME>bhv001</SHORT-NAME>
+                  <DATA-TYPE-MAPPING-REFS>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/pkg/types/mapping/pkgDataTypeMappingsSet</DATA-TYPE-MAPPING-REF>
+                  </DATA-TYPE-MAPPING-REFS>
+                  <EVENTS>
+                    <TIMING-EVENT UUID="e35550b3-c853-579a-c5e9-30e1da15143f">
+                      <SHORT-NAME>onesec</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/pkg/tst002/swc001/bhv001/step</START-ON-EVENT-REF>
+                      <PERIOD>0.1</PERIOD>
+                    </TIMING-EVENT>
+                    <OPERATION-INVOKED-EVENT UUID="cd63b68e-b9b7-4829-ad51-c9d326f8657e">
+                      <SHORT-NAME>call_foo</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/pkg/tst002/swc001/bhv001/foo</START-ON-EVENT-REF>
+                      <OPERATION-IREF S="providedOperation">
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/pkg/tst002/swc001/pport</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/pkg/interfaces/iOperations/foo</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <SWC-MODE-SWITCH-EVENT S="" UUID="71858a8b-8332-491b-b303-dfcda17a49d8">
+                      <SHORT-NAME>on_init</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/pkg/tst002/swc001/bhv001/init</START-ON-EVENT-REF>
+                      <ACTIVATION>ON-ENTRY</ACTIVATION>
+                      <MODE-IREFS>
+                        <MODE-IREF>
+                          <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/pkg/tst002/swc001/rmode</CONTEXT-PORT-REF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/pkg/interfaces/iEcuMode/currentMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/pkg/interfaces/EcuMode/Init</TARGET-MODE-DECLARATION-REF>
+                        </MODE-IREF>
+                      </MODE-IREFS>
+                    </SWC-MODE-SWITCH-EVENT>
+                  </EVENTS>
+                  <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                  <PER-INSTANCE-MEMORYS>
+                    <PER-INSTANCE-MEMORY UUID="9a9332f4-dc67-4484-ad7b-80c47f9f7208">
+                      <SHORT-NAME>pim_one</SHORT-NAME>
+                      <INIT-VALUE />
+                      <TYPE>Int_n320to320</TYPE>
+                      <TYPE-DEFINITION>/pkg/types/app/Int_n320to320</TYPE-DEFINITION>
+                    </PER-INSTANCE-MEMORY>
+                  </PER-INSTANCE-MEMORYS>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="e2191d75-88f2-59d4-b44d-808507df3592">
+                      <SHORT-NAME>init</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>init</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="87064d55-aefb-5e85-396d-3d2dca541582">
+                      <SHORT-NAME>step</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-READ-ACCESSS>
+                        <VARIABLE-ACCESS UUID="dd52cdf0-1064-5bd5-d9d1-6fc8dc379a43">
+                          <SHORT-NAME>IN_input_e1</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/pkg/tst002/swc001/in</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iRcv/e1</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="5341c68b-063b-5e84-6eb7-f0e594cf622d">
+                          <SHORT-NAME>IN_input_e2</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/pkg/tst002/swc001/in</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iRcv/e2</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="d48516e8-ea5a-5caf-e291-474ee85d39dc">
+                          <SHORT-NAME>IN_input_e3</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/pkg/tst002/swc001/in</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iRcv/e3</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="b7e86dd3-5e12-5f59-20cd-7b6dd2eb43c7">
+                          <SHORT-NAME>IN_input_e4</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/pkg/tst002/swc001/in</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iRcv/e4</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="3d8aaba0-f614-5d95-c080-a9fdbbba7720">
+                          <SHORT-NAME>IN_input_e5</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/pkg/tst002/swc001/in</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iRcv/e5</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="5bb61675-0656-5f55-caf5-b982a4e0b9f6">
+                          <SHORT-NAME>IN_input_e6</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/pkg/tst002/swc001/in</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iRcv/e6</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                      </DATA-READ-ACCESSS>
+                      <DATA-WRITE-ACCESSS>
+                        <VARIABLE-ACCESS UUID="6f92736b-a69e-553c-d184-0433d42e2105">
+                          <SHORT-NAME>OUT_output_e1</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/pkg/tst002/swc001/out</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iSend/e1</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="7d19b7e0-be8a-583f-588e-212ce9b952eb">
+                          <SHORT-NAME>OUT_output_e2</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/pkg/tst002/swc001/out</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iSend/e2</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="82e61267-d783-5ba9-2c0a-a3d68dfeb9cc">
+                          <SHORT-NAME>OUT_output_e3</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/pkg/tst002/swc001/out</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iSend/e3</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="58d124bc-759f-5be6-22d0-1018ecdd4090">
+                          <SHORT-NAME>OUT_output_e4</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/pkg/tst002/swc001/out</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iSend/e4</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="67b62b1e-646c-506e-f959-1a5a84b08769">
+                          <SHORT-NAME>OUT_output_e5</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/pkg/tst002/swc001/out</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iSend/e5</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="7e871624-1585-5f9a-1fa7-7dea698e606c">
+                          <SHORT-NAME>OUT_output_e6</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/pkg/tst002/swc001/out</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/pkg/interfaces/iSend/e6</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                        </VARIABLE-ACCESS>
+                      </DATA-WRITE-ACCESSS>
+                      <SYMBOL>step</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="61110903-9d81-4c0e-ba59-920f72426eee">
+                      <SHORT-NAME>foo</SHORT-NAME>
+                      <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="REENTRANCY-LEVEL"><SD GID="_mixed">NON-REENTRANT</SD></SDG><SD GID="_path">REENTRANCY-LEVEL@3/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG></SDGS></ADMIN-DATA><MINIMUM-START-INTERVAL>1.0</MINIMUM-START-INTERVAL>
+                      
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SERVER-CALL-POINTS>
+                        <ASYNCHRONOUS-SERVER-CALL-POINT S="" UUID="27f58f83-1d93-44fc-ae78-b51c399ee66d">
+                          <SHORT-NAME>asyncCallBar</SHORT-NAME>
+                          <CATEGORY />
+                          <OPERATION-IREF S="requiredOperation">
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/pkg/tst002/swc001/rport</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/pkg/interfaces/iServer/bar</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                          <TIMEOUT>0.1</TIMEOUT>
+                        </ASYNCHRONOUS-SERVER-CALL-POINT>
+                      </SERVER-CALL-POINTS>
+                      <SYMBOL>foo</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>true</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </APPLICATION-SW-COMPONENT-TYPE>
+            <APPLICATION-SW-COMPONENT-TYPE UUID="81902963-0892-4af2-8bf6-a929a746f9a5">
+              <SHORT-NAME>swc002</SHORT-NAME>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="ceacfdb7-a098-49b8-b405-c1368977ed9d">
+                  <SHORT-NAME>bhv</SHORT-NAME>
+                  <EVENTS>
+                    <TIMING-EVENT UUID="5bdd54d5-50ae-4ad3-bdea-e0b0ab2bcab6">
+                      <SHORT-NAME>twosec</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/pkg/tst002/swc002/bhv/step</START-ON-EVENT-REF>
+                      <PERIOD>0.2</PERIOD>
+                    </TIMING-EVENT>
+                  </EVENTS>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="27c1ce26-d5b5-463c-b68a-dfaf8a93e3f7">
+                      <SHORT-NAME>step</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>step</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>true</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </APPLICATION-SW-COMPONENT-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
