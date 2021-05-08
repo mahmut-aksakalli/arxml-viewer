@@ -4,7 +4,13 @@ module.exports = {
   },
   pluginOptions: {
     electronBuilder: {
-        nodeIntegration: true
+        nodeIntegration: true,
+        builderOptions: {
+          productName: "arxmlviewer",
+          icon:"src/assets/icon.png",
+          artifactName: "${productName}_setup.${ext}"
+          
+      }
     }
   }
 }

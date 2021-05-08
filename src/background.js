@@ -24,7 +24,7 @@ async function createWindow() {
     show: false,
     minWidth : 700,
     minHeight: 600,
-    icon: path.join(__static, '../src/assets/logo.ico'),
+    icon: path.join(__static, '../src/assets/icon.png'),
     webPreferences: {
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
       enableRemoteModule: true

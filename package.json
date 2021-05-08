@@ -1,6 +1,7 @@
 {
   "name": "arxml-app",
   "version": "0.1.0",
+  "description": "ARXML viewer",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -10,6 +11,8 @@
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps"
   },
+  "author": "mafumuttOS",
+  "license": "ISC",
   "main": "background.js",
   "dependencies": {
     "core-js": "^3.6.5",
