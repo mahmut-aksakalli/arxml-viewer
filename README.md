@@ -8,11 +8,16 @@ This tool aims to visualize ARXML files in human readable form with easy search 
 * open ARXML files up to 500MB
 * Drag-drop file operations
 * Multiple file support
-![](./public/gif/drag-drop.gif)
+
+    ![multiple-file](./public/gif/drag-drop.gif)
+
 * Easy usage
-![](./public/gif/simple-usage.gif)
+
+    ![simple-usage](./public/gif/simple-usage.gif)
+
 * Advanced search functionalities
-![](./public/gif/simple-search.gif)
+
+    ![](./public/gif/simple-search.gif)
 
 ## Executables
 * [win_x64_setup](./dist/arxmlviewer_setup_win_x64.exe)
