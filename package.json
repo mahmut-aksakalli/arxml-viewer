@@ -35,5 +35,9 @@
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-electron-builder": "~2.0.0-rc.6",
     "vue-template-compiler": "^2.6.11"
+  },
+  "engines" : { 
+    "npm" : ">=6.0.0 <7.0.0",
+    "node" : ">=14.0.0 <15.0.0"
   }
 }
